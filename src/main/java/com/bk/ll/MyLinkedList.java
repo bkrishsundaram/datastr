@@ -127,7 +127,6 @@ public class MyLinkedList<E> {
 	    list.remove(3);
 	    System.out.println(list.toArray());
 		
-		
 	}
 
 }
