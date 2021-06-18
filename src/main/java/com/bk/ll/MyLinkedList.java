@@ -104,6 +104,21 @@ public class MyLinkedList<E> {
 		 }
 		 return str+null;
 	 }
+	 
+	 public Node reverseLinkedList() {
+		  Node cur = head;
+		  Node pre = null;
+		  while(cur != null) {
+			  Node temp = cur.next;
+			  cur.next = pre;
+			  pre = cur;
+			  cur = temp;
+		  }
+		  head = pre;
+		  return null;
+	 }
+	 
+	 
 	
 	public static void main(String[] args) {
 		
@@ -126,6 +141,10 @@ public class MyLinkedList<E> {
 	    System.out.println("After remove called");
 	    list.remove(3);
 	    System.out.println(list.toArray());
+	    list.reverseLinkedList();
+	    System.out.println("after reverse ============");
+	    System.out.println(list.toArray());
+	    
 		
 	}
 
