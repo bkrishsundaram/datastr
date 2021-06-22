@@ -51,4 +51,17 @@ public class Tree {
 		 }
 		 
 	 }
+	 
+	 public int getMaxsum(Node root) {
+		 if (root == null) {
+			 return 0;
+		 }
+		 
+		 int leftsum = Math.max(0,getMaxsum(root.leftChild));
+		 int rightsum = Math.max(0, getMaxsum(root.rightChild));
+		 return  Math.max(leftsum, rightsum) + root.data;
+		 
+		 
+	 }
+ 	 
 }
