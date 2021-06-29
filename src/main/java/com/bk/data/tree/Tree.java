@@ -42,11 +42,11 @@ public class Tree {
 					 }
 				 }else {
 					 current = parent.rightChild;
-				 }
-				 if(current == null) {
-					 parent.rightChild = newNode;
-					 return;
-				 }
+				     if(current == null) {
+					     parent.rightChild = newNode;
+					    return;
+				      }
+			    }
 			 }
 		 }
 		 
