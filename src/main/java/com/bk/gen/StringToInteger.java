@@ -40,6 +40,11 @@ public class StringToInteger {
 		
 		StringToInteger si = new StringToInteger();
 		
+		char c = '3';
+		int a = c - '0';
+		System.out.println(a);
+		
+		
 		System.out.println(si.StringToInt("-2345"));
 		System.out.println(si.StringToInt("234534gjhksgdf"));
 
