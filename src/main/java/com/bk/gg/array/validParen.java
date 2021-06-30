@@ -28,7 +28,7 @@ public class validParen {
 		       // return ;
 				
 			}catch(Exception e) {
-				System.out.println("false");
+				System.out.println("false" +e);
 			}
 			
 		} 
