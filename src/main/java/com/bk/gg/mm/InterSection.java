@@ -6,10 +6,29 @@ import java.util.List;
 
 public class InterSection {
 	
+	public void selectSort(int arr[]) {
+		
+		for(int i=0; i<arr.length; i++) {
+			int min = i;
+			for(int j=i; j< arr.length; j++) {
+				if(arr[j] < arr[min]) {
+					min = j;
+				}
+				int temp = arr[min];
+				arr[min] = arr[i];
+				arr[i] = temp;
+			}
+		}
+	}
+	
+	
+	
 	
 	public int[] intersect(int arr1[], int arr2[]) {
-		Arrays.sort(arr1);
-		Arrays.sort(arr2);
+		//Arrays.sort(arr1);
+		//Arrays.sort(arr2);
+		 selectSort(arr1);
+		 selectSort(arr2);
 		List<Integer> inter = new ArrayList<>();
 		int j=0;
 		int i=0;
