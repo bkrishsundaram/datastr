@@ -22,9 +22,44 @@ public class EnumTest {
 
 	public static void main(String[] args) {
 		
-		System.out.println(Color.BLUE.getValue());
+		//System.out.println(Color.BLUE.getValue());
 		
-		
+		System.out.println(enumCons.cent.getCount());
+		System.out.println(enumCons.cent.getName());
+		//System.out.println(  enumCons.values());
+		for(enumCons e : enumCons.values()) {
+			System.out.println(e.getCount());
+		}
 	}
 
 }
+
+ enum enumCons {
+    dime("dime",5),
+    cent("cent",10),
+    quarter("quarter",25);
+	 
+	 private enumCons() {
+		 
+	 }
+	 
+	 private String name;
+	 private int count; 
+	 
+	 enumCons(String name, int count) {
+	  	 this.name = name;
+	  	 this.count = count;
+	 }
+	 
+	 public int getCount() {
+		 return count;
+	 }
+	 
+	 public String getName() {
+		 return name;
+	 }
+	
+ }
+
+ 
+
