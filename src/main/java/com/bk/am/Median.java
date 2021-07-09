@@ -30,8 +30,8 @@ public class Median {
 		 }
 		 
 		 int mid = sum.length / 2;
-		 if( mid % 2 == 0) {
-			 result = (float) (sum[mid-1] +sum[mid+1]) / 2;
+		 if( sum.length % 2 == 0) {
+			 result = (float) (sum[mid-1] +sum[mid]) / 2;
 		 }else {
 			 result = sum[mid];
 		 }

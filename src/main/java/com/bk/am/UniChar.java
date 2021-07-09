@@ -36,8 +36,7 @@ public class UniChar {
 		 return -1;
 	 }
 	 
-	 
-	 public int usingMap(String str) {
+   public int usingMap(String str) {
 		 str = str.toLowerCase();
 		 Map<Character, Integer> map = new HashMap<>();
 		 
@@ -45,13 +44,11 @@ public class UniChar {
 			 char ch = str.charAt(i);
 			 map.put(ch, map.getOrDefault(ch, 0)+1);
 		 }
-		 
 		 for(int i =0 ; i<str.length(); i++) {
 			 if(map.get(str.charAt(i))==1) {
 				 return i;
 			 }
 		 }
-		 
 		 return -1;
 	 }
 	

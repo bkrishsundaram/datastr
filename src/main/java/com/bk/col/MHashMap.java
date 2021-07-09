@@ -83,7 +83,7 @@ public class MHashMap<K,V> {
 		   table[hash] = e.next;
 	   }
 	   Entry<K,V> pre = e;
-       e = e.next;
+       e = e.next;   
        while(e != null) {
     	   if(e.getKey() == key) {
     		   pre.next = e.next;

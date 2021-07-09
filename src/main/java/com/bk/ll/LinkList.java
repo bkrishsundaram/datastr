@@ -34,7 +34,7 @@ public class LinkList {
 		  }
 	  }
 	  
-	  public void remoce(int data) {
+	  public void remove(int data) {
 		  Node node = head;
 		  if(node == null) {
 			  return;
