@@ -43,6 +43,16 @@ public class Sort {
 	 
 	 public int[] insertinSort(int arr[]) {
  
+		 for(int firstUnsorted=1; firstUnsorted< arr.length; firstUnsorted++) {
+			 int newelement = arr[firstUnsorted];
+			 int i;
+			 for(i = firstUnsorted; i > 0&& arr[i-1] > newelement; i--) {
+				 arr[i] = arr[i-1];
+			 }
+			 arr[i] = newelement;
+			 
+		 }
+		 
 		 return arr;
 	 }
 	 
@@ -66,7 +76,8 @@ public class Sort {
 		Sort s = new Sort();
 		int res[];
 		//res = s.bubbleSort(arr);
-		res = s.selectionSort(arr);
+		//res = s.selectionSort(arr);
+		res = s.insertinSort(arr);
 		System.out.println(Arrays.toString(res));
 		
 	}

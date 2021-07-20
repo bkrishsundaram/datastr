@@ -1,0 +1,26 @@
+
+Fetching Duplicate Records
+
+     SELECT emp_name, COUNT(emp_name) FROM emp GROUP BY emp_name HAVING COUNT > 1;
+     
+ Decode
+ 
+     SELECT order_no, DECODE(status,'0','ordered','1','packed') FROM orders;
+     
+     SELECT order_no, CASE( WHEN status='0' THEN 'ordered'
+                            WHEN status='1' THEN 'packed'
+                          ) FROM orders;
+                          
+                          
+    SELECT TO_CHAR(TO_DATE('30-01-2021','DD-MM-YYYY'),'DD-MM-YYYY') FROM DUAL;
+    
+    First Record
+    
+      SELECT * FROM employee WHERE ROWNUM = 1;
+      
+   Last Record
+   
+      SELECT * FROM employee ROWNUM = ( SELECT MAX(ROWNUM)  FROM employee);
+      
+    
+
