@@ -70,6 +70,10 @@ public class StreamAPI {
 		resList.forEach(e -> System.out.println(e.getName())); 
 		
 		
+		Comparator<EmployeeSte> mf = Comparator.comparing(EmployeeSte::getName).thenComparing(EmployeeSte::getAge);
+		list.stream().sorted(mf).collect(Collectors.toList());
+		
+		
 	}
 	
 	

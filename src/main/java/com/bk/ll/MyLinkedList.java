@@ -26,7 +26,7 @@ public class MyLinkedList<E> {
 	public MyLinkedList() {
 		 head = null;
 		 size = 0;
-	}
+	} 
 	
 	public boolean add(E data) {
 	

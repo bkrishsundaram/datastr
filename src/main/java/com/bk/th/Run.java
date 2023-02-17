@@ -1,5 +1,7 @@
 package com.bk.th;
 
+import java.math.BigDecimal;
+
 public class Run {
 
 	public static void main(String[] args) {
@@ -15,7 +17,10 @@ public class Run {
       Thread t1 = new Thread(th1);
       t1.start();
       
-		
+      
+      BigDecimal b = new BigDecimal(10);
+      
+      b.doubleValue();
 		
 	}
 
