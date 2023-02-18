@@ -5,7 +5,7 @@ public class CountLetter {
 	public static void main(String[] args) {
 		
 		CountLetter c = new CountLetter();
-		System.out.println(c.couuntlet("daaaabbbccccb"));
+		System.out.println(c.couuntlet("daaaabbbccccbd"));
 
 	}
 	
