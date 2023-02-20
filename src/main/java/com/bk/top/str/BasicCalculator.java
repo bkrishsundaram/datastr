@@ -1,6 +1,6 @@
 package com.bk.top.str;
 
-public class BasicCal {
+public class BasicCalculator {
 	
 	
 	public int calc(String s) {
@@ -45,7 +45,9 @@ public class BasicCal {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		 
+		BasicCalculator b = new BasicCalculator();
+		System.out.println(b.calc("2+4*8*2+2"));
 
 	}
 
