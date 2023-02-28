@@ -1,14 +1,15 @@
 package com.bk.am;
 
-import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class TwoSum {
 
 	public static void main(String[] args) {
 
 		TwoSum t = new TwoSum();
-		int arr[] = {17, 4, 5, 6, 10, 11, 4, -3, -5, 3, 15, 2, 7};
+		int arr[] = {17, 4, 5, 6, 10, 11, 4, -3, -5, 3, 15, 2, 7,20,-3};
 		int target = 13;
 		 int res[];
 		 //res = t.bruteForce(arr, target);
@@ -16,8 +17,8 @@ public class TwoSum {
 		   res = t.usinghash(arr, target);
 		// System.out.println(Arrays.toString(res));
 		 
-		   System.out.println(t.twosumall(arr));
-		   
+		 // System.out.println(t.twosumall(arr));
+		   System.out.println(t.twosumallMap(arr));
 		 
 	}
 	
@@ -95,6 +96,38 @@ public class TwoSum {
 		  } else {
 			  return "-1";
 		  }
+		  
+	  }
+	  
+	  public String twosumallMap(int arr[]) {
+		  
+		  Integer temp = null;
+		  String result = "";
+		  Map<Integer, Boolean> map = new LinkedHashMap<>();
+		  int sum = arr[0];
+		  for (int i=1; i< arr.length; i++) {
+			  int remainder = sum - arr[i];
+			  if(map.containsKey(remainder)) {
+				  map.put(remainder, true);
+			  }else {
+				  map.put(arr[i], false);
+			  }
+		  }
+		  
+		  for(Map.Entry<Integer, Boolean> entry : map.entrySet()) {
+			  
+			  if (entry.getValue() ==true) {
+				  result = result + entry.getKey() +"," + ( sum - entry.getKey())+" ";
+			  }
+			  
+		  }
+		  
+		  if(result.equals("")) {
+			  return "-1";  
+		  }else {
+			  return result;
+		  }
+		  
 		  
 	  }
 	
